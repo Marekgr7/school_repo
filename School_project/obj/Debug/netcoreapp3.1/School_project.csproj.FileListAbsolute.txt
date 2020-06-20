@@ -1,0 +1,11 @@
+C:\Users\marek\source\repos\School_project\School_project\bin\Debug\netcoreapp3.1\School_project.exe
+C:\Users\marek\source\repos\School_project\School_project\bin\Debug\netcoreapp3.1\School_project.deps.json
+C:\Users\marek\source\repos\School_project\School_project\bin\Debug\netcoreapp3.1\School_project.runtimeconfig.json
+C:\Users\marek\source\repos\School_project\School_project\bin\Debug\netcoreapp3.1\School_project.runtimeconfig.dev.json
+C:\Users\marek\source\repos\School_project\School_project\bin\Debug\netcoreapp3.1\School_project.dll
+C:\Users\marek\source\repos\School_project\School_project\bin\Debug\netcoreapp3.1\School_project.pdb
+C:\Users\marek\source\repos\School_project\School_project\obj\Debug\netcoreapp3.1\School_project.csprojAssemblyReference.cache
+C:\Users\marek\source\repos\School_project\School_project\obj\Debug\netcoreapp3.1\School_project.AssemblyInfoInputs.cache
+C:\Users\marek\source\repos\School_project\School_project\obj\Debug\netcoreapp3.1\School_project.AssemblyInfo.cs
+C:\Users\marek\source\repos\School_project\School_project\obj\Debug\netcoreapp3.1\School_project.dll
+C:\Users\marek\source\repos\School_project\School_project\obj\Debug\netcoreapp3.1\School_project.pdb
