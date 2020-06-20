@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace School_project
 {
@@ -11,10 +12,12 @@ namespace School_project
             new Pracownik("Goerge", "StPierre", "tester")
             };
 
+        static LINQLogic linq = new LINQLogic();
+
 
         static void Main(string[] args)
         {
-            
+
             DUMMY_EMPLOYEES[0].UstawDepartment("HR");
             DUMMY_EMPLOYEES[1].UstawDepartment("IT");
 
@@ -39,15 +42,22 @@ namespace School_project
             }
 
             Console.Out.WriteLine("Lista pracownikow : ");
-
-            Pracownik nate = DUMMY_EMPLOYEES.Find((p) => { return p.Login == "Nate"; });
-
-            Console.WriteLine("Pracownik nate to " + nate.Login);
             
             foreach (Pracownik p in DUMMY_EMPLOYEES)
             {
                 Console.Out.WriteLine($"login: {p.Login}, nazwisko: {p.Nazwisko}");
             }
+
+            var posortowaniPracownicy = linq.SortujAlfabetycznie(DUMMY_EMPLOYEES);
+
+            Console.Out.WriteLine("Posortowani Pracownicy: ");
+            foreach(Pracownik p in posortowaniPracownicy)
+            {
+                Console.Out.WriteLine($"login: {p.Login}, nazwisko: {p.Nazwisko}");
+            }
+
+            Console.Out.WriteLine("Ustawiam nowe hasla: ");
+            ustawLosoweHaslo(DUMMY_EMPLOYEES);
 
             Console.Out.WriteLine();
 
@@ -79,6 +89,14 @@ namespace School_project
         {
             Pracownik pracownik = DUMMY_EMPLOYEES.Find((p) => { return p.Login == login; });
             pracownik.UstawDepartment(department);
+        }
+
+        static void ustawLosoweHaslo(List<Pracownik> pracownicy)
+        {
+            pracownicy.ForEach((p) => {
+                p.Haslo = linq.RandomString(6);
+                Console.Out.WriteLine("Nowe haslo dla pracownika " + p.Nazwisko + "to: " + p.Haslo);
+            });
         }
     }
 }
